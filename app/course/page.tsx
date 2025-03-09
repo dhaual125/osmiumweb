@@ -28,8 +28,8 @@ function SubTopic({
           {list.map((item, index) => (
             <li
               key={index}
-               className="flex flex-col p-3 mt-2 hover:bg-[#18181b] hover:text-[#fff] transition-colors duration-200 rounded-lg cursor-pointer"
-  onClick={() => item.path && onItemClick?.(item.path)}
+              className="flex flex-col p-3 mt-2 hover:bg-[#18181b] hover:text-[#fff] transition-colors duration-200 rounded-lg cursor-pointer"
+              onClick={() => item.path && onItemClick?.(item.path)}
             >
               <strong>{item.title}:</strong> {item.content}
             </li>
@@ -125,7 +125,7 @@ function Course() {
               <SubTopic
                 title="Overview"
                 description="Web development involves building and maintaining websites, covering front-end, back-end, and full-stack development."
-                
+
               />
 
               <VideoSection />

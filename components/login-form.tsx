@@ -37,9 +37,9 @@ export function LoginForm({ className, ...props }: React.ComponentProps<"div">) 
   };
 
   return (
-    <div className={cn("flex flex-col gap-6 max-w-md mx-auto", className)} {...props}>
-      <Card className="shadow-lg">
-        <CardHeader className="space-y-1 pb-2">
+    <div className={cn("grid place-items-center min-h-screen", className)} {...props}>
+  <Card className="shadow-lg w-full max-w-md">
+    <CardHeader className="space-y-1 pb-2">
           <CardTitle className="text-2xl font-semibold text-center">Welcome back</CardTitle>
           <CardDescription className="text-center">Login to your account</CardDescription>
         </CardHeader>
@@ -61,13 +61,14 @@ export function LoginForm({ className, ...props }: React.ComponentProps<"div">) 
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <Label htmlFor="password" className="text-sm font-medium">Password</Label>
-                <a href="#" className="text-xs text-primary hover:underline underline-offset-4">
+                <a href="#" className="text-xs text-primary hover:underline underline-offset-4">    
                   Forgot password?
                 </a>
               </div>
               <Input 
                 id="password" 
                 type="password" 
+                placeholder="Enter your password "
                 className="h-10"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
